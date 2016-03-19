@@ -1,0 +1,1 @@
+web: gunicorn samplelti.wsgi --log-file -
