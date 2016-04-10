@@ -7,6 +7,21 @@ from django.views.decorators.csrf import csrf_exempt
 def index(request):
 	return HttpResponse("hello world")
 
+
+myhtml = '''
+<html>
+<h1> my lti tool </h1>
+<p> some text </p>
+
+<iframe src="https://www.bing.com" width="500" height="200">
+</iframe>
+
+</html>
+'''
+
+
 @csrf_exempt
 def lti_launch(request):
-	return HttpResponse("hello this is the lti tool")
+	return HttpResponse(myhtml)
+
+	# return HttpResponse("hello this is the lti tool")
