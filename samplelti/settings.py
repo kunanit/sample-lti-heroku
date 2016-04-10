@@ -126,6 +126,10 @@ STATICFILES_DIRS = [
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+# trusted csrf origins
+CSRF_TRUSTED_ORIGINS = ['canvas.harvard.edu']
+
+
 try:
     from local_settings import *
 except ImportError:
