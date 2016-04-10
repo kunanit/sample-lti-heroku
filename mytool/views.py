@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.clickjacking import xframe_options_exempt
+
 
 
 # Create your views here.
@@ -21,6 +23,7 @@ myhtml = '''
 
 
 @csrf_exempt
+@xframe_options_exempt
 def lti_launch(request):
 	return HttpResponse(myhtml)
 
